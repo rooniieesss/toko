@@ -20,6 +20,10 @@ class WarnaProduk extends Model
     ];
 
     public function produk(){
-    	return $this->belongsTo('App\Produk', 'produk_id', 'id');
+    	return $this->belongsTo('App\Produk');
+    	// return $this->belongsTo('App\Produk', 'id');
+    	// return $this->belongsTo('App\Produk', 'produk_id');
+    	// return $this->belongsTo('App\Produk', 'id', 'produk_id');
+    	// return $this->belongsTo('App\Produk', 'produk_id');
     }
 }

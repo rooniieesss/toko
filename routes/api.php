@@ -19,4 +19,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::prefix('produk')->group(function () {
     Route::get('/show/{id}','ProdukController@show');
+    Route::get('/show-event/{id}','ProdukController@showEvent');
 });

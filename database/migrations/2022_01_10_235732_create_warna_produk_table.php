@@ -15,7 +15,7 @@ class CreateWarnaProdukTable extends Migration
     {
         Schema::create('warna_produk', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('produk_id');
+            $table->unsignedBigInteger('produk_id')->nullable();
             $table->string('warna');
             $table->timestamps();
         });

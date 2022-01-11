@@ -21,6 +21,10 @@ class Produk extends Model
 
     public function warna_produk()
     {
-        return $this->hasMany('App\WarnaProduk', 'produk_id');
+        // return $this->hasMany('App\WarnaProduk'); //(fail)
+        // return $this->hasMany('App\WarnaProduk', 'id'); //(fail)
+        return $this->hasMany('App\WarnaProduk', 'produk_id'); //(fail)
+        // return $this->hasMany('App\WarnaProduk', 'id', 'produk_id'); //(fail)
+        // return $this->hasMany('App\WarnaProduk', 'produk_id', 'id'); //(fail)
     }
 }
